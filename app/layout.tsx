@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cinzel_Decorative, Lora } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cinzelDecorative = Cinzel_Decorative({
+  weight: ["400", "700", "900"],
   subsets: ["latin"],
-});
+  variable: "--font-cinzel",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lora = Lora({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-});
+  variable: "--font-lora",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-serif ${cinzelDecorative.variable} ${lora.variable}`}
       >
         {children}
       </body>
