@@ -1,5 +1,4 @@
-import { Card } from "@/components/ui/card"
-import { House, houses } from "@/lib/house"
+import { House } from "@/lib/house"
 
 interface HouseCardProps {
   house: House
@@ -9,7 +8,6 @@ interface HouseCardProps {
 export function HouseCard({ house, reasoning }: HouseCardProps) {
   return (
     <div className="w-full max-w-4xl mx-auto space-y-6">
-
 
         <Card className="p-8 md:p-12 bg-card/90 backdrop-blur-sm border-2 border-border shadow-2xl">
          <div className="text-center mb-8">
@@ -41,6 +39,7 @@ export function HouseCard({ house, reasoning }: HouseCardProps) {
 
 
       {/* kuch aur vii */}
+      
        
     </div>
 

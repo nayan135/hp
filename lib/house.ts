@@ -23,9 +23,9 @@ export const houses: Record<HouseName, House> = {
     name: "Gryffindor",
     emoji:"",
     colors:{
-        primary:"",
-        secondary:"",
-        gradient:"",
+        primary:"#4342f",
+        secondary:"#d4ac2b",
+        gradient:"#ff0000 to #ffdd00",
 
     },
     traits:["Bravery", "Courage", "Chivalry"],

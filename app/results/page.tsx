@@ -4,6 +4,9 @@ import { Sparkles } from "@/components/sparkles"
 import { houses, type HouseName } from "@/lib/house"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
+import { HouseCard } from "@/components/housecard"
+import Link from "next/link"
+
 
 export default function ResultsPage() {
   const router = useRouter()
@@ -82,7 +85,7 @@ export default function ResultsPage() {
           <HouseCard house={selectedHouse} reasoning={reasoning} />
         </div>
 
-        {/* Action buttons */}
+        {/* Action buttons  */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8 max-w-4xl mx-auto">
           <Button
             onClick={handleRetake}
@@ -99,9 +102,10 @@ export default function ResultsPage() {
             >
               Return to Start
             </Button>
+         
           </Link>
         </div>
-
+  
         {/* Share prompt */}
         <div className="text-center mt-8 text-muted-foreground">
           <p className="text-sm">Share your house with fellow witches and wizards!</p>
