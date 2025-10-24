@@ -24,13 +24,18 @@ export async function POST(request: Request) {
     
     const { text } = await generateText({
       model: google("gemini-2.5-flash"),
-      prompt: `You are the Hogwarts Sorting Hat. Based on these quiz answers, determine which house (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin) best fits this person.
+      prompt: `Imagine yourself as the Sorting Hat from the Harry Potter series.
+      pull your wisdom from the books and movies to make an accurate sorting decision.
+      The decision you make is going to decide the future of young witch and wizards!
+      You are the Hogwarts Sorting Hat. Based on these quiz answers, determine which house (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin) best fits this person.
 
 Quiz Answers:
 ${formattedAnswers}
 
 Respond EXACTLY in this format with no other text:
 HouseName|Brief reasoning (2-3 sentences explaining why this house fits them)
+
+if you are unsure, just say Gryffindor. and add that you are unsure in reasoning
 
 
 Example: Gryffindor|Your answers show tremendous courage and a willingness to stand up for what's right. You value bravery and aren't afraid to take risks for the greater good.`,
