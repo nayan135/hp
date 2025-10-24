@@ -21,7 +21,7 @@ export interface House {
 export const houses: Record<HouseName, House> = {
   Gryffindor: {
     name: "Gryffindor",
-    emoji:"",
+    emoji:"😂",
     colors:{
         primary:"#4342f",
         secondary:"#d4ac2b",
