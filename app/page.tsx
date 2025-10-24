@@ -1,11 +1,15 @@
 import Image from "next/image";
 import { MagicalBackground } from "@/components/magical-background";
 import { Sparkles } from "@/components/sparkles";
+import { GreatHallNavbar } from "@/components/great-hall-navbar";
+import { MaraudersMapFooter } from "@/components/marauders-map-footer";
 export default function Home() {
   return (
   <main className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <MagicalBackground />
       <Sparkles />
+      <GreatHallNavbar />
+      <MaraudersMapFooter />
       {/* effeeccttt */}
       <div className="absolute inset-0 bg-gradient-radial from-amber-900/20 via-transparent to-transparent pointer-events-none" />
 
