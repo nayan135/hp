@@ -1,4 +1,4 @@
-//rewritng result page for now
+//rewritng result page for now hehe
 "use client"
 import { MagicalBackground } from "@/components/magical-background"
 import { Sparkles } from "@/components/sparkles"
@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation"
 import { HouseCard } from "@/components/housecard"
 import { houses } from "@/lib/house"
 import Link from "next/link"
+import { audio } from "@/hooks/audio"
 
 export default function ResultsPage() {
   const router = useRouter()
@@ -17,6 +18,7 @@ export default function ResultsPage() {
   const [reasoning, setReasoning] = useState<string>("")
 
   const [isRevealing, setIsRevealing] = useState(false)
+  const {play: sortingHatReveal} = audio("/sound/sortinghatreveal.mp3", false)
 
   useEffect(() => {
     const resultStr = sessionStorage.getItem("sortingResult")
@@ -27,6 +29,7 @@ export default function ResultsPage() {
     }
     try{
       const result = JSON.parse(resultStr)
+      sortingHatReveal()
 
       setTimeout( ()=> {
         const houseName = result.house as keyof typeof houses
@@ -38,7 +41,7 @@ export default function ResultsPage() {
       console.error("Error parsing sorting result:", error)
       router.push("/quiz")
     }
-  }, [router])
+  }, [router, sortingHatReveal])
 
   const handleRetake =() => {
     sessionStorage.removeItem("sortingResult")
