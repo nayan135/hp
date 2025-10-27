@@ -8,7 +8,7 @@ interface Footprint {
   left: number
   delay: number
 }
-
+ 
 export function MaraudersMapFooter() {
   const [footprints, setFootprints] = useState<Footprint[]>([])
 
@@ -26,17 +26,17 @@ export function MaraudersMapFooter() {
     return (
         <footer className="relative bg-gradient-to-b from-amber-50 to-amber-100 border-t-2 border-amber-900/30 py-12 overflow-hidden">
 
-        <div className="absolute inset-0 opacity-30 mix-blend-multiply" style={{backgroundImage: 'url(/images/great-hall-bg.jpg)',}}/>
+        <div className="absolute inset-0 opacity-30 mix-blend-multiply" style={{backgroundImage: 'url(/images/great-hal-bg.jpg)'}}/>
         <div className="absolute inset-0 overflow-hidden">
         {footprints.map((footprint) => (
             <div
             key={footprint.id}
-            className="absolute text-amber-900/20 text-2xl animated-pulse"
+            className="absolute text-amber-900/20 text-2xl animate-pulse"
             style={{
-                left: '${footprint.left}%',
-                top: '${20+ (footprint.id % 3)*25}%',
+                left: `${footprint.left}%`,
+                top: `${20+ (footprint.id % 3)*25}%`,
                 animation: 'footstep 4s ease-in-out infinite',
-                animationDelay: '${footprint.delay}s',
+                animationDelay: `${footprint.delay}s`,
 
             }}
             >👣</div>
@@ -59,7 +59,7 @@ export function MaraudersMapFooter() {
                     {name: "Slytherin", emoji: "🐍", color: "text-green-700"},
                     
                 ].map ((house)=> (
-                    <div key={house.name} className={'text-3xl opacity-40 hover:opacity-100 transition-all duration-300 cursor-ponter transform hover:scale-110 ${house.color}'} title={house.name}>
+                    <div key={house.name} className={`text-3xl opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer transform hover:scale-110 ${house.color}`} title={house.name}>
                         {house.emoji}
                         </div>
                   

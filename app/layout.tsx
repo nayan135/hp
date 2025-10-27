@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel_Decorative, Lora } from "next/font/google";
 import "./globals.css";
+import { MaraudersMapFooter } from "@/components/marauders-map-footer";
 
 const cinzelDecorative = Cinzel_Decorative({
   weight: ["400", "700", "900"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`font-serif ${cinzelDecorative.variable} ${lora.variable}`}
       >
         {children}
+        <MaraudersMapFooter />
       </body>
     </html>
   );

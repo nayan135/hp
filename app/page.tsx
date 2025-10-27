@@ -9,7 +9,7 @@ export default function Home() {
       <MagicalBackground />
       <Sparkles />
       <GreatHallNavbar />
-      <MaraudersMapFooter />
+    
       {/* effeeccttt */}
       <div className="absolute inset-0 bg-gradient-radial from-amber-900/20 via-transparent to-transparent pointer-events-none" />
 
@@ -26,6 +26,7 @@ export default function Home() {
           </div>
         </div>
         </div>
+
       </main>
   );
 }
