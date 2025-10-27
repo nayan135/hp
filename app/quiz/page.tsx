@@ -5,7 +5,7 @@ import { MagicalBackground } from "@/components/magical-background"
 import { Sparkles } from "@/components/sparkles"
 import { QuizQuestionComponent } from "@/components/quiz"
 import { quizQuestions, type QuizAnswer } from "@/lib/quiz"
-import { audio } from "@/hooks/audio"
+import { useAudio } from "@/hooks/audio"
 
 export default function QuizPage() {
   const router = useRouter()
@@ -14,21 +14,20 @@ export default function QuizPage() {
   const [isProcessing, setIsProcessing] = useState(false)
 const [hasStarted, setHasStarted] = useState(false)
     const currentQuestion = quizQuestions[currentQuestionIndex]
+const {play: playSortingHat} =useAudio("/sound/sortinghat.mp3", false)
 
 
+useEffect(() => {
+    if (!hasStarted) {
+     setTimeout( ()=>{
+      playSortingHat()
+      setHasStarted(true)
+     }, 2000)
+    }
+  }, [hasStarted, playSortingHat])
   const handleAnswer = async (answer: string | number) => {
     const newAnswers = [...answers, { questionId: currentQuestion.id, answer }]
     setAnswers(newAnswers)
-
-    const {play: playSortingHat} =audio("/sound/sorting-hat.mp3", false)
-    
-     useEffect(() => {
-    if (!hasStarted) {
-      playSortingHat()
-      setHasStarted(true)
-    }
-  }, [hasStarted, playSortingHat])
-
 
     if (currentQuestionIndex < quizQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1)

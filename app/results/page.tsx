@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation"
 import { HouseCard } from "@/components/housecard"
 import { houses } from "@/lib/house"
 import Link from "next/link"
-import { audio } from "@/hooks/audio"
+import { useAudio } from "@/hooks/audio"
 
 export default function ResultsPage() {
   const router = useRouter()
@@ -18,7 +18,7 @@ export default function ResultsPage() {
   const [reasoning, setReasoning] = useState<string>("")
 
   const [isRevealing, setIsRevealing] = useState(false)
-  const {play: sortingHatReveal} = audio("/sound/sortinghatreveal.mp3", false)
+  const {play: sortingHatReveal} = useAudio("/sound/sortinghatreveal.mp3", false)
 
   useEffect(() => {
     const resultStr = sessionStorage.getItem("sortingResult")
