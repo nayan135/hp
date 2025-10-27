@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "HP Sorting Hat Experience",
   description: "Lets see if you are a mugggle or just a little bit late for your lettter to hogwarts",
   icons:{
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   }
 };
 
