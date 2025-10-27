@@ -27,4 +27,9 @@ cd hp
 
 npm install
 
+```
+.env.example
+```
+GOOGLE_GENERATIVE_AI_API_KEY = YOUR API KEY (visit aistudio.google.com)
+
 
