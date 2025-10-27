@@ -1,6 +1,6 @@
 import type { House } from "@/lib/house"
 import Image from "next/image"
-
+import { useAudio } from "@/hooks/audio"
 interface HouseCardProps {
   house: House
   reasoning?: string
@@ -15,7 +15,11 @@ export function HouseCard({ house, reasoning }: HouseCardProps) {
     Hufflepuff: { pri: "#D97706", sec: "#FEF3C7", glow: "rgba(217,119,6,0.4)" },
   }
   const t = themes[house.name as keyof typeof themes] || themes.Gryffindor
-
+  const a= house.audio
+const {play: playSortingreveal} =useAudio(a, false)
+setTimeout(()=> {
+  playSortingreveal()
+},2000)
   return (
     <div className="max-w-4xl mx-auto">
       <div

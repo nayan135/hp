@@ -16,7 +16,6 @@ export default function ResultsPage() {
   const router = useRouter()
   const [house, setHouse] = useState<House | null>(null)
   const [reasoning, setReasoning] = useState<string>("")
-
   const [isRevealing, setIsRevealing] = useState(false)
   const {play: sortingHatReveal} = useAudio("/sound/sortinghatreveal.mp3", false)
 
@@ -29,9 +28,9 @@ export default function ResultsPage() {
     }
     try{
       const result = JSON.parse(resultStr)
-      sortingHatReveal()
-
+      
       setTimeout( ()=> {
+        sortingHatReveal()
         const houseName = result.house as keyof typeof houses
         setHouse(houses[houseName])
         setReasoning(result.reasoning)
@@ -47,6 +46,7 @@ export default function ResultsPage() {
     sessionStorage.removeItem("sortingResult")
     router.push("/quiz")
   }
+
 
   if(isRevealing || !house){
     return (
@@ -65,6 +65,7 @@ export default function ResultsPage() {
           Better be...
         </p>
       </main>
+
     )
   }
 
