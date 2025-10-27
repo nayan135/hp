@@ -13,7 +13,9 @@ Your Response is feteched to the **Gemma-Model** then it analyses your traits an
 
 ## Featuress
 AI powered sorting - so gemma is your sorting hat
+
 Customized house card - you get different house card acc to houses
+
 Accurate question - you get your memories revived from this 
 
 
