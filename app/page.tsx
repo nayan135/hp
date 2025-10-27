@@ -20,7 +20,7 @@ export default function Home() {
           <div className="w-32 h-32 relative">
             <div className="absolute inset-0 bg-gradient-to b from-amber-800 to-amber-950 rounder-full blur-xl opacity-50 glow-pulse"/>
             <div className="relative text-8xl candle-flicker">  
-              
+               {/*sooo confuseddd */}
 
             </div>
           </div>
