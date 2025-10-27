@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
     
     const { text } = await generateText({
-      model: google("gemini-2.5-flash"),
+      model: google("gemma-3-27b-it"),
       prompt: `Imagine yourself as the Sorting Hat from the Harry Potter series.
       pull your wisdom from the books and movies to make an accurate sorting decision.
       The decision you make is going to decide the future of young witch and wizards!

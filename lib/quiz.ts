@@ -45,6 +45,18 @@ scaleLabels: { min: "Not at all", max: "Very much" },
       ,"For something I've worked on for years",
       "Save it forever, luck shouldn't be wasted" ],
   },
+  {
+    id:6,
+    question:"Which of these forbidden items tempts you most?",
+    type:"choice",
+    options:["The diary that writes back.","THe Invisibility Cloak","The map that sees every secret","The ring that whispers of immortality."],
+  },
+  {
+  id:7,
+  question:"The Sorting Hat hesitates on your head. It whispers: ‘You could be great anywhere.’ What do you say?",
+  type:"choice",
+  options:["Then place me where I’ll be tested.","Let me decide my own fate.","Where I’ll find people who truly understand me.","Where I can achieve greatness by any means."],
+  },
 ]
 
 

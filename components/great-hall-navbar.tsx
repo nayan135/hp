@@ -11,7 +11,7 @@ export function GreatHallNavbar() {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
-    const scrollProgess=Math.min(scrollY/300,1)
+    const scrollProgress=Math.min(scrollY/300,1)
 
     return(
         <nav className="fixed top-0 left-0 right-0 z-50 ponter-event-none">

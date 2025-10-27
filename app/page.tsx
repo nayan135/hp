@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MagicalBackground } from "@/components/magical-background";
 import { Sparkles } from "@/components/sparkles";
 import { GreatHallNavbar } from "@/components/great-hall-navbar";
@@ -17,16 +18,23 @@ export default function Home() {
 
         {/* k rakham yrr*/}
         <div className="mb-8 flex justify-center">
-          <div className="w-32 h-32 relative">
-            <div className="absolute inset-0 bg-gradient-to b from-amber-800 to-amber-950 rounder-full blur-xl opacity-50 glow-pulse"/>
-            <div className="relative text-8xl candle-flicker">  
-               {/*sooo confuseddd */}
-
-            </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-amber-500/40 rounded-full blur-3xl animate-pulse" />
+            <div className="relative text-8xl animate-bounce">🎩</div>
           </div>
         </div>
-        </div>
 
-      </main>
+        <h1 className="font-[family-name:var(--font-cinzel)] text-5xl md:text-6xl font-bold mb-6 text-amber-50 drop-shadow-lg">
+          Welcome To The Sorting Hat Experience
+        </h1>
+        
+        <Link href="/quiz" 
+          className="inline-block px-8 py-4 bg-gradient-to-b from-amber-100 to-amber-50 border-2 border-amber-900 font-[family-name:var(--font-cinzel)] text-xl font-semibold rounded-lg hover:from-amber-200 hover:to-amber-100 transition-all hover:shadow-2xl hover:scale-105 text-amber-900">
+          Know Your House
+        </Link>
+      </div>
+
+ 
+    </main>
   );
 }
