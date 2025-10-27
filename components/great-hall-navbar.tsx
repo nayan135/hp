@@ -14,8 +14,8 @@ export function GreatHallNavbar() {
     const scrollProgress=Math.min(scrollY/300,1)
 
     return(
-        <nav className="fixed top-0 left-0 right-0 z-50 ponter-event-none">
-            <motion.div className="relative h-20 pointer-events-auto" style={{transform: 'scaleY(${1-scrollProgress*0.3}}', tranformOrigin: "top",}}
+        <nav className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+            <motion.div className="relative h-20 pointer-events-auto" style={{transform: `scaleY(${1-scrollProgress*0.3})`, transformOrigin: "top"}}
             >
                 <div className="absolute inset-0 bg-gradient-tp-b form-amber-100 to-amber50 border-b-2 border-amber-900/39 shadow-lg">
                 
