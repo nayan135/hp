@@ -21,7 +21,7 @@ export interface House {
 export const houses: Record<HouseName, House> = {
   Gryffindor: {
     name: "Gryffindor",
-    emoji:"url(/images/gryffindor.jpg)",
+    emoji:"/images/Gryffindor.jpg",
     colors:{
         primary:"#4342f",
         secondary:"#d4ac2b",
@@ -40,7 +40,7 @@ export const houses: Record<HouseName, House> = {
 
 Slytherin: {
   name:"Slytherin",
-  emoji:"url(/images/slytherin.jpg)",
+  emoji:"/images/Slytherin.jpg",
   colors:{
     primary:"#1a472a",
     secondary:"#aaaaaa",
@@ -58,7 +58,7 @@ Slytherin: {
 },
 Ravenclaw:{
   name:"Ravenclaw",
-  emoji:"url(/images/ravenclaw.jpg)",
+  emoji:"/images/Ravenclaw.jpg",
   colors:{
     primary:"#0e1a40",
     secondary:"#946b2d",
@@ -76,7 +76,7 @@ Ravenclaw:{
 
 Hufflepuff:{
   name:"Hufflepuff",
-  emoji:"url(/images/hufflepuff.jpg)",
+  emoji:"/images/Hufflepuff.jpg",
   colors:{
     primary:"#ecb939",
     secondary:"#000000",

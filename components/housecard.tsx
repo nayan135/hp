@@ -1,4 +1,5 @@
 import type { House } from "@/lib/house"
+import Image from "next/image"
 
 interface HouseCardProps {
   house: House
@@ -22,7 +23,15 @@ export function HouseCard({ house, reasoning }: HouseCardProps) {
         style={{ borderColor: t.pri, boxShadow: `0 0 40px ${t.glow}` }}
       >
         <div className="text-center mb-8">
-          <div className="text-7xl mb-4 drop-shadow-lg">{house.emoji}</div>
+          <div className="relative w-32 h-32 mx-auto mb-4">
+            <Image 
+              src={house.emoji} 
+              alt={`${house.name} emblem`}
+              fill
+              className="object-contain drop-shadow-lg"
+              priority
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-2" style={{ color: t.pri }}>
             {house.name}
           </h1>
